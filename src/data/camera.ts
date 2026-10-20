@@ -397,8 +397,8 @@ export const recipes: Recipe[] = [
   },
   {
     id: 'paisaje',
-    title: 'Paisaje / Gran Muralla',
-    subtitle: 'Latitud para el cielo, textura para la piedra.',
+    title: 'Paisaje / karst',
+    subtitle: 'Latitud para el cielo, textura para la roca.',
     scene: 'paisaje',
     priority: 'pro',
     settings: {
@@ -410,7 +410,7 @@ export const recipes: Recipe[] = [
       enfoque: 'infinito / bloqueado',
       audio: 'ambiente con vientos',
     },
-    why: 'D-Log M conserva cielo y piedra cuando el contraste es alto. Es la escena donde el formato tiene más sentido.',
+    why: 'D-Log M conserva cielo y roca cuando el contraste es alto. Es la escena donde el formato tiene más sentido.',
     watchOut: 'Expón para las altas luces (−0,3 a −0,7 EV). Un cielo sin detalle no se recupera en el móvil.',
   },
   {

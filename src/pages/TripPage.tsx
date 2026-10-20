@@ -41,29 +41,29 @@ export function TripPage() {
   return (
     <div className="page trip-page">
       <PageIntro
-        kicker="EXPEDICIÓN 01 / CHINA / 17 DÍAS"
+        kicker={`EXPEDICIÓN 01 / CHINA / ${tripDays.length} DÍAS`}
         title={
           <>
             Una ruta. <em>No un álbum.</em>
           </>
         }
-        lede="85 planos pensados para contar un viaje, no para llenar una tarjeta. Cada día tiene una historia, una luz y una restricción."
+        lede={`${totalShots} planos pensados para contar un viaje, no para llenar una tarjeta. Cada día tiene una historia, una luz y una restricción.`}
       />
 
       <section className="trip-setup">
         <div className="trip-setup__grid">
           <div className="trip-setup__copy">
-            <Kicker tone="light">TU VENTANA DE SALIDA</Kicker>
-            <h2>{trip.phase === 'sin-fecha' ? 'Ponle fecha al viaje.' : trip.label}</h2>
+            <Kicker tone="light">TU PRIMER DÍA EN CHINA</Kicker>
+            <h2>{trip.phase === 'sin-fecha' ? 'Ponle fecha al primer día.' : trip.label}</h2>
             <p>
               {trip.phase === 'sin-fecha'
-                ? 'Cuando pongas la fecha de salida, la app sabrá en qué día del plan estás y qué toca grabar.'
+                ? 'Cuando pongas tu primer día en China, la app sabrá en qué día del plan estás y qué toca grabar.'
                 : trip.sublabel}
             </p>
           </div>
           <label className="date-field date-field--dark">
             <span>
-              <CalendarDays size={15} aria-hidden="true" /> Fecha de salida
+              <CalendarDays size={15} aria-hidden="true" /> Primer día en China
             </span>
             <input
               type="date"
@@ -79,7 +79,7 @@ export function TripPage() {
               <strong>{completedShots}</strong> / {totalShots} planos
             </span>
             <span>
-              <strong>{completedDays}</strong> / 17 días completos
+              <strong>{completedDays}</strong> / {tripDays.length} días completos
             </span>
           </div>
           <ProgressBar value={percent(completedShots, totalShots)} tone="acid" label="Progreso de rodaje" />
@@ -87,17 +87,23 @@ export function TripPage() {
 
         <div className="trip-setup__route">
           <Plane size={15} aria-hidden="true" />
-          <span>Pekín</span>
+          <span>Cantón</span>
           <i />
-          <span>Xi’an</span>
+          <span>Shenzhen</span>
           <i />
-          <span>Chengdu</span>
+          <span>Yangshuo</span>
+          <i />
+          <span>Guilin</span>
+          <i />
+          <span>Shanghái</span>
+          <i />
+          <span>Suzhou</span>
+          <i />
+          <span>Hangzhou</span>
           <i />
           <span>Chongqing</span>
           <i />
-          <span>Zhangjiajie</span>
-          <i />
-          <span>Shanghái</span>
+          <span>Vuelta</span>
         </div>
       </section>
 
@@ -164,7 +170,7 @@ export function TripPage() {
         title="Plan de rodaje"
         aside={
           <span className="section-note">
-            <CircleDot size={12} aria-hidden="true" /> {completedDays}/17 días
+            <CircleDot size={12} aria-hidden="true" /> {completedDays}/{tripDays.length} días
           </span>
         }
       />
@@ -247,10 +253,12 @@ export function TripPage() {
       </div>
 
       <div className="route-note">
-        <span className="route-note__stamp">RUTA BASE</span>
+        <span className="route-note__stamp">RUTA REAL</span>
         <p>
-          La ruta asume Pekín → Xi’an → Chengdu → Chongqing → Zhangjiajie → Shanghái. Si tu itinerario es otro,
-          conserva la lógica: llegada, inmersión, fricción, aire y regreso. Dime tu ruta real y la adapto.
+          Cantón (2) → Shenzhen (4) → Yangshuo (2) → Guilin (1) → Shanghái (4) → Suzhou (1) →
+          Hangzhou (1) → Chongqing (12 h) → vuelo. El día 1 ya es Cantón; el 16, la escala en Chongqing; el
+          17, la llegada a casa. Si cambias fechas o trenes, conserva la lógica: apertura, inmersión, fricción,
+          aire y regreso.
         </p>
       </div>
     </div>

@@ -28,7 +28,8 @@ const defaultState: AppState = {
   completedShots: [],
   savedIdeas: [],
   notes: {},
-  tripStart: null,
+  // Primer día en China confirmado: 26 oct 2026. El día 1 ya es Cantón.
+  tripStart: '2026-10-26',
   completedMissions: [],
   activeDays: [],
   checks: {},

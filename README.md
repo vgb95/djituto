@@ -43,4 +43,4 @@ GitHub Pages automático en cada push a `main` (`.github/workflows/deploy.yml`).
 
 ## Nota sobre la ruta
 
-La ruta incluida — **Pekín → Xi'an → Chengdu → Chongqing → Zhangjiajie → Shanghái** — es una base editable de 17 días. La estructura (días, planos, luces y capítulos) está pensada para adaptarse a cualquier itinerario real: ciudades, fechas y planos se pueden reescribir sin tocar la app.
+La ruta incluida — **Cantón → Shenzhen → Yangshuo → Guilin → Shanghái → Suzhou → Hangzhou → Chongqing (12 h) → vuelta** — está construida sobre el itinerario real del viaje (26 oct – 11 nov 2026). El día 1 ya es Cantón; el día 16 es la escala en Chongqing y el 17, la llegada a casa. La estructura (días, planos, luces y capítulos) está pensada para adaptarse a cualquier itinerario real: ciudades, fechas y planos se pueden reescribir sin tocar la app.

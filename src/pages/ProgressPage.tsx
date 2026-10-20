@@ -133,7 +133,7 @@ export function ProgressPage() {
     {
       id: 'all-shots',
       title: 'La ruta completa',
-      description: '85 planos. Una historia que ya existe.',
+      description: `${totalShots} planos. Una historia que ya existe.`,
       icon: <Trophy size={19} />,
       unlocked: allShotsDone,
     },
@@ -188,7 +188,7 @@ export function ProgressPage() {
             {allShotsDone
               ? 'Ruta completa. Ahora empieza lo difícil: elegir.'
               : completedDays > 0
-                ? `${completedDays} de 17 días tienen todos sus planos.`
+                ? `${completedDays} de ${tripDays.length} días tienen todos sus planos.`
                 : 'Aún no has marcado un plano. El primero es el único que cuesta.'}
           </h2>
           <p>

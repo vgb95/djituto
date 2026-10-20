@@ -1,3 +1,5 @@
+import { tripDays } from '../data/trip'
+
 export function toISODate(date: Date): string {
   const year = date.getFullYear()
   const month = String(date.getMonth() + 1).padStart(2, '0')
@@ -75,7 +77,7 @@ export function getTripStatus(startISO: string | null): TripStatus {
       daysUntil: null,
       currentDay: null,
       label: 'Sin fecha todavía',
-      sublabel: 'Añade el día de salida para activar el plan diario.',
+      sublabel: 'Añade tu primer día en China para activar el plan diario.',
     }
   }
   const today = todayKey()
@@ -91,13 +93,13 @@ export function getTripStatus(startISO: string | null): TripStatus {
       sublabel: 'Prepara la cámara, la tarjeta y el backup. No grabes más de la cuenta.',
     }
   }
-  if (diff < 17) {
+  if (diff < tripDays.length) {
     return {
       hasDate: true,
       phase: 'en-curso',
       daysUntil: 0,
       currentDay: diff + 1,
-      label: `Día ${diff + 1} de 17`,
+      label: `Día ${diff + 1} de ${tripDays.length}`,
       sublabel: 'Estás dentro del viaje. Graba, copia y duerme.',
     }
   }
@@ -105,7 +107,7 @@ export function getTripStatus(startISO: string | null): TripStatus {
     hasDate: true,
     phase: 'terminado',
     daysUntil: 0,
-    currentDay: 17,
+    currentDay: tripDays.length,
     label: 'Viaje completado',
     sublabel: 'Ahora empieza la segunda parte: seleccionar, editar y publicar.',
   }

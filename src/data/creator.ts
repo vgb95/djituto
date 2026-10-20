@@ -380,9 +380,9 @@ export const seriesIdeas: SeriesIdea[] = [
     format: '15–30 s · vertical · sin música',
     why: 'Está integrada en la estructura del viaje, no depende de la inspiración diaria y te obliga a escuchar. Después puede seguir en tu ciudad.',
     episodes: [
-      'El carrusel de maletas',
-      'El viento en la Gran Muralla',
-      'El monorriel dentro del edificio',
+      'El vapor de los dim sum',
+      'El pitido de las puertas del tren',
+      'El motor del ferry',
     ],
   },
   {
@@ -404,7 +404,7 @@ export const seriesIdeas: SeriesIdea[] = [
     format: '20 s · vertical · sonido directo',
     why: 'La Pocket 3 es ideal para grabar cerca y pasar desapercibida. Es una firma visual barata de producir y difícil de imitar sin tu ojo.',
     episodes: [
-      'Un bordillo de Pekín',
+      'Un bordillo de Cantón',
       'Una persiana de Chongqing',
       'El mármol de una estación',
     ],
@@ -428,9 +428,9 @@ export const seriesIdeas: SeriesIdea[] = [
     format: '10 s · vertical · un sonido por ventana',
     why: 'El formato se puede repetir en cualquier viaje. Crea una firma reconocible y una serie que se completa sola.',
     episodes: [
-      'Pekín, 6:12',
-      'El tren a Xi’an',
-      'La ventana de Zhangjiajie',
+      'Cantón, 6:12',
+      'El tren a Shenzhen',
+      'La ventana de Yangshuo',
     ],
   },
   {
@@ -440,7 +440,7 @@ export const seriesIdeas: SeriesIdea[] = [
     format: '30–45 s · vertical · meta-viaje',
     why: 'Rompe la cuarta pared sin ser pretencioso y muestra proceso, no perfección. Ideal para construir confianza como creador.',
     episodes: [
-      'La Gran Muralla sin gente (intento 1)',
+      'El ferry sin turistas (intento 1)',
       'El Bund a las 6:00',
       'El plano que no salió',
     ],
@@ -485,7 +485,7 @@ export const creatorPrinciples = [
   {
     number: '03',
     title: 'Lo específico viaja mejor que lo genérico.',
-    text: '“China es increíble” no le sirve a nadie. “El carrusel de maletas de Pekín suena a esto” sí. Un detalle concreto atraviesa culturas; una conclusión general se olvida.',
+    text: '“China es increíble” no le sirve a nadie. “El vapor de los dim sum de Cantón suena a esto” sí. Un detalle concreto atraviesa culturas; una conclusión general se olvida.',
   },
   {
     number: '04',
@@ -552,7 +552,7 @@ export const editBeats = [
     title: 'Orientación · 3–8 s',
     description:
       'Dónde estás y qué está en juego, con la mínima información. Un rótulo, una frase, una imagen. Si necesitas diez segundos para explicarlo, no lo tienes claro.',
-    example: '“Pekín, 6:40. El primer día que no entiendo nada”.',
+    example: '“Cantón, 6:40. El primer día que no entiendo nada”.',
   },
   {
     number: '03',
@@ -731,7 +731,7 @@ export const incomePhases = [
 export const incomeRules = [
   'Una audiencia no es un negocio. Un cliente sí. Separa las dos cosas desde el primer día.',
   'Vende una transformación concreta: “3 videos verticales al mes para que tu restaurante tenga presencia”, no “contenido de calidad”.',
-  'El viaje es tu portfolio, no tu plan de ingresos. Los clientes que pagan están en tu ciudad o en internet, no en la Gran Muralla.',
+  'El viaje es tu portfolio, no tu plan de ingresos. Los clientes que pagan están en tu ciudad o en internet, no en el Bund.',
   'No aceptes “hazlo gratis y te etiqueto”. El crédito no paga el alquiler.',
   'Antes de comprar más equipo, vende una pieza. El equipo no valida la oferta.',
   'Tu ventaja es que tienes un trabajo: puedes elegir clientes. No conviertas la necesidad de ingresos en permiso para decir sí a todo.',
@@ -756,7 +756,7 @@ export const thirtyDayPlan = [
     ],
   },
   {
-    days: '04–17',
+    days: '04–20',
     title: 'Modo captura.',
     tasks: [
       'Sigue el plan diario de esta app: no edites durante el viaje, solo graba y copia.',
@@ -765,7 +765,7 @@ export const thirtyDayPlan = [
     ],
   },
   {
-    days: '18–24',
+    days: '21–26',
     title: 'Edita tres piezas y una madre.',
     tasks: [
       'Elige los tres capítulos más fuertes de la serie. Edítalos con el flujo de 45 minutos.',
@@ -774,7 +774,7 @@ export const thirtyDayPlan = [
     ],
   },
   {
-    days: '25–30',
+    days: '27–30',
     title: 'Publica y prueba la oferta.',
     tasks: [
       'Publica dos capítulos y la pieza madre en días distintos.',

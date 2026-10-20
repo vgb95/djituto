@@ -55,7 +55,7 @@ export function DayPage() {
       <header className="day-hero">
         <div className="day-hero__main">
           <Kicker>
-            DÍA {String(day.day).padStart(2, '0')} / 17 · {chapter?.title.toUpperCase()}
+            DÍA {String(day.day).padStart(2, '0')} / {tripDays.length} · {chapter?.title.toUpperCase()}
           </Kicker>
           <p className="day-hero__city">{day.city}</p>
           <h1>{day.title}</h1>
@@ -64,7 +64,7 @@ export function DayPage() {
         <div className="day-hero__stamp" aria-hidden="true">
           <span>DÍA</span>
           <strong>{String(day.day).padStart(2, '0')}</strong>
-          <i>CHINA / 17</i>
+          <i>CHINA / {tripDays.length}</i>
         </div>
       </header>
 

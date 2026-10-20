@@ -87,12 +87,12 @@ export function HomePage() {
           <div className="trip-hero__number">
             {trip.phase === 'antes' && trip.daysUntil ? String(trip.daysUntil).padStart(2, '0') : null}
             {trip.phase === 'en-curso' && trip.currentDay ? String(trip.currentDay).padStart(2, '0') : null}
-            {trip.phase !== 'antes' && trip.phase !== 'en-curso' ? '17' : null}
+            {trip.phase !== 'antes' && trip.phase !== 'en-curso' ? String(tripDays.length) : null}
             <span>
               {trip.phase === 'antes'
-                ? 'días para despegar'
+                ? 'días para el día 1'
                 : trip.phase === 'en-curso'
-                  ? 'de 17 días'
+                  ? `de ${tripDays.length} días`
                   : trip.phase === 'terminado'
                     ? 'días de viaje'
                     : 'días de viaje'}
@@ -100,16 +100,16 @@ export function HomePage() {
           </div>
           <div className="trip-hero__copy">
             <h2 id="trip-hero-title">
-              {trip.phase === 'sin-fecha' ? 'La historia empieza antes del billete.' : trip.label}
+              {trip.phase === 'sin-fecha' ? 'La ruta empieza en Cantón.' : trip.label}
             </h2>
             <p>
               {trip.phase === 'sin-fecha'
-                ? 'Ruta base de 17 días, 85 planos y una pregunta: ¿qué merece ser recordado?'
+                ? `Tu ruta de ${tripDays.length} días, ${totalShots} planos y una pregunta: ¿qué merece ser recordado?`
                 : trip.sublabel}
             </p>
             {!trip.hasDate ? (
               <label className="hero-date">
-                <span>Fecha de salida</span>
+                <span>Primer día en China</span>
                 <input
                   type="date"
                   value={state.tripStart ?? ''}
@@ -130,18 +130,22 @@ export function HomePage() {
         </div>
 
         <div className="trip-hero__footer">
-          <div className="route-ribbon" aria-label="Ruta base">
-            <span>Pekín</span>
+          <div className="route-ribbon" aria-label="Ruta del viaje">
+            <span>Cantón</span>
             <i />
-            <span>Xi’an</span>
+            <span>Shenzhen</span>
             <i />
-            <span>Chengdu</span>
+            <span>Yangshuo</span>
             <i />
-            <span>Chongqing</span>
-            <i />
-            <span>Zhangjiajie</span>
+            <span>Guilin</span>
             <i />
             <span>Shanghái</span>
+            <i />
+            <span>Suzhou</span>
+            <i />
+            <span>Hangzhou</span>
+            <i />
+            <span>Chongqing</span>
           </div>
           <Link to="/rodar" className="trip-hero__link">
             Abrir plan <ArrowRight size={16} aria-hidden="true" />
@@ -225,7 +229,7 @@ export function HomePage() {
           </span>
           <span>
             <strong>Prepara China</strong>
-            <small>17 días · 85 planos</small>
+            <small>{tripDays.length} días · {totalShots} planos</small>
           </span>
           <ArrowRight size={17} aria-hidden="true" />
         </Link>
